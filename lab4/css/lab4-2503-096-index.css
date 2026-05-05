@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main {
+  width: 100%;
+  margin: 0 auto;
+  margin: 0;
+  padding-top: 60px;
+}
+
+.menu{
+    background-color: aqua;
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    z-index: 999;
+    position: fixed;
+}
+.menu .logo{
+    float: left;
+    height: 40px;
+    margin: 8px 15px;
+}
+.menu .wen{
+    float:left;
+    line-height:40px;
+    font-size:24px;
+    margin: 8px 15px;
+}
+.menu ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    margin: 8px 15px;
+}
+.menu li{
+    float: left;
+    padding: 0;
+    margin: 8px 15px;
+}
+.menu li a{
+    display: block;
+    padding: 0 25px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 8px 0;
+}
+.left {
+  width: 150px;
+  background: #087a86;
+  padding: 20px;
+  position: relative;
+  float: left;
+  margin: 0px 0px 0px 150px;
+}
+
+.left ul {
+  list-style: none;
+  margin: auto;
+}
+
+.left li {
+  margin: 10px;
+}
+
+.left a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.left a:hover {
+  color: #f60;
+}
+.banner{
+  float: left;
+  width: 1030px;
+  height: 603px;
+  overflow: hidden;
+}
+.right{
+  float: left;
+}
+.right .guangzi1{
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 25px;
+  margin: 20px 0;
+  background-color: #f60;
+}
+.right .guangzi2{
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 25px;
+  margin: 20px 0;
+  background-color: rgb(26, 190, 26);
+}
+.right .guangzi3{
+  border: 2px solid;
+  border-radius: 4px;
+  font-size: 25px;
+  margin: 20px 0;
+  background-color: rgb(73, 13, 201);
+}
+.fix{
+  position: fixed;
+  padding-top: 10px;
+  width: 100px;
+  display: inline-block;
+  z-index: 9999;
+  right: 0;
+  top: 20%;
+  overflow: visible;
+  max-height: none;
+  white-space: normal;
+  background-color: aqua;
+}
+.fix .men a{
+  font-size: 25px;
+}
+.clear{
+  clear: both;
+}
+.news{
+  margin: 20px 0 0 350px;
+  float: left;
+  border: 2px solid;
+  border-radius: 4px;
+}
+.news p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.news .book{
+  margin: 10px 5px;
+  width: 300px;
+  border: 2px solid;
+  border-radius: 4px;
+  float: left;
+  height: 340px;
+  position: relative;
+}
+.news .book img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  max-width: 100%;
+  cursor: pointer;
+}
+.news .book .link{
+  position: relative;
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+.news .book .link a{
+  position: absolute;
+  left: 135px;
+  text-decoration: none;
+}
+.shangshi{
+  margin: 20px 0 0 350px;
+  border: 2px solid;
+  border-radius: 4px;
+  width: fit-content;
+}
+.shangshi p{
+  font-size: 20px;
+  font-weight: bold;
+}
+.shangshi table td{
+  width: 300px;
+  border: 2px solid;
+  border-radius: 4px;
+  height: 340px;
+  position: relative;
+}
+.shangshi table td img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.shangshi table td p{
+  text-align: center;
+}
+.shangshi table td p a{
+   text-decoration: none;
+}
+.news .book img{
+  display: block;
+  transition: all 0.4s;
+}
+.news .book .tip{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.news .book:hover img {
+  opacity: 0.4;
+  transform: translateX(50px) scale(1.2);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+.news .book:hover .tip{
+  opacity: 1;
+}
+.shangshi table td .tip{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.4s;
+  pointer-events: none;
+}
+.shangshi table td:hover img{
+  opacity: 0.4;
+}
+.shangshi table td:hover .tip{
+  opacity: 1;
+}
+.menu .login-button{
+    display: block;
+    padding: 0 25px;
+    font-size: 16px;
+    margin: 8px 0;
+    color: #0000EE;
+    cursor: pointer;
+}
+#login{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+.login-style{
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 420px;
+  height: 423px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  margin: 30px auto;
+}
+input{
+  border: none;
+  margin-top: 20px;
+  outline: none;
+  transition: 0.4s;
+}
+.login-style .header{
+  width: 340px;
+  height: 50px;
+  margin: 5px auto;
+}
+.login-style .pass{
+  width: 255px;
+  margin: 0 auto;
+  overflow: hidden;
+  list-style: none;
+}
+.login-style .pass>li{
+  width: 125px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+.login-style .pass>li a{
+  color: #333;
+  font-size: 20px;
+  text-decoration: none;
+}
+.login-style .pass>li:first-child a{
+  font-weight: 700;
+}
+.login-style .pass>li .line{
+  margin-left: 15px;
+}
+.mains{
+  width: 340px;
+  margin: 0 auto;
+}
+.mains form input{
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-color: #f6f6f6;
+}
+.mains form input::placeholder{
+  color: #666;
+  font-size: 15px;
+}
+.mains .agree{
+  color: #888;
+  font-size: 13px;
+  margin-top: 20px;
+  text-align: center;
+}
+.mains .agree a{
+  color: #000;
+  margin-left: 5px;
+}
+.mains .but input{
+  display: block;
+  width: 340px;
+  height: 50px;
+  background-color: #fc4e48;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.mains .regist{
+  width: 250px;
+  margin: 20px auto 0;
+  overflow: hidden;
+  list-style: none;
+}
+.mains .regist li{
+  float: left;
+  padding: 5px 30px;
+}
+.mains .regist a{
+  color: #000;
+  text-decoration: none;
+}
+.footer{
+  width: 290px;
+  height: 60px;
+  background-color: #f5f6fa;
+  margin-top: 20px;
+}
+.footer ul{
+  width: 290px;
+  margin: 0 70px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.footer li{
+  margin: 15px 10px;
+  display: inline-block;
+}
+.footer,.footer img{
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+body{
+  position: relative;
+  height: 100%;
+}
+html{
+  height: 100%;
+}
+#register{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+.register-style{
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 420px;
+  height: 423px;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  margin: 30px auto;
+}
+
+
+
+
+
+
+.register-style .headers{
+  width: 340px;
+  height: 50px;
+  margin: 5px auto;
+}
+.register-style .headers ul{
+  list-style: none;
+}
+.register-style .headers ul>li{
+  font-size: 30px;
+  margin-left: 135px;
+}
+.mainss{
+  width: 340px;
+  margin: 0 auto;
+}
+.mainss form input{
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-color: #f6f6f6;
+}
+.mainss form input::placeholder{
+  color: #666;
+  font-size: 15px;
+}
+.mainss .buts input{
+  display: block;
+  width: 340px;
+  height: 50px;
+  background-color: #fc4e48;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.footers{
+  width: 290px;
+  height: 60px;
+  background-color: #f5f6fa;
+  margin-top: 20px;
+}
+.footers ul{
+  width: 290px;
+  margin: 0 70px;
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.footers li{
+  margin: 15px 10px;
+  display: inline-block;
+}
+.footers,.footers img{
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.register-style .fanhui{
+  padding-top: 40px;
+  padding-left: 150px;
+}
+#close{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+.model{
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  margin: 0;
+  display: none;
+  border: 2px solid;
+}
+.model .close-btn{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 36px;
+  color: #888;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+}
+.close-btn:hover {
+  color: #f44336;
+}
+.login-style,.register-style{
+  display: none;
+}
+#login:checked ~ .model{
+  display: block;
+}
+#login:checked ~ .model .login-style {
+  display: block;
+}
+#register:checked ~ .model{
+  display: block;
+}
+#register:checked ~ .model .register-style{
+  display: block;
+}
+#close:checked ~ .model{
+  display: none;
+}
+.banner .picture{
+  list-style: none;
+}
+.banner .picture>li{
+  position: relative;
+  width: 1030px;
+  height: 603px;
+  animation: donghua 22s ease 2s infinite alternate;
+}
+.banner .picture img{
+  width: 1030px;
+  height: 603px;
+  width: 100%;
+  height: 100%;
+}
+.banner .picture span{
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 16px;
+  color: #EF3000;
+  display: inline-block;
+  border: 1px solid #FF3300;
+  border-radius: 50%;
+  position: absolute;
+  right: 70px;
+  bottom: 20px;
+}
+@keyframes donghua{
+  0%{bottom: 0px}
+  20%{bottom: 603px}
+  45%{bottom: 1206px}
+  60%{bottom: 1809px}
+  80%{bottom: 2412px}
+  100%{bottom: 3015px}
+}
+.menu ul .login-button{
+  display: inline-block;
+
+}
+.menu ul .login-button:hover{
+  transform: scale(0.8);
+}
+.menu ul .gouwu{
+  background-color: aqua;
+  width: 35px;
+  height: 35px;
+  display: block;
+}
+.menu ul .gouwu img{
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  cursor: pointer;
+  transition:  0.6s;
+}
+.menu ul .gouwu img:hover{
+  transform: rotate(360deg);
+}
+.but input:hover{
+  transform: scale(0.8);
+  background: linear-gradient(red, blue);
+}
+.buts input:hover{
+  transform: scale(0.8);
+  background: linear-gradient(red, blue);
+}
+.menu ul .sousuo{
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-color: aqua;
+}
+.menu ul .sousuo img{
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+  cursor: pointer;
+  transition:  0.6s;
+}
+.menu ul .sousuo img:hover{
+  transform: rotate(360deg);
+}
